@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/12/2023 11:25:37" ReportInfo.Modified="01/12/2023 11:30:01" ReportInfo.CreatorVersion="1.0.0.0">
+  <Dictionary>
+    <MsSqlDataConnection Name="Connection" ConnectionString="rijcmlqJUrEa/KIcQqhhcfnlqC6PC6b70ltOmTeLWh2vhAF0ivYvQZbcY/A8qTXhAWsZJeFGEPA9xrXyYOG3aFk4+m5VLkW47UF1SQuY3zBGwlFBP8gb3y0vS5CJC8D0K4fQxSkqHQ1YVmBu/Eqs4Ne+kxHhRGTmp6pWsKSb+7HpFZjEakrY1BhKcI0Ty5dK1WcJUyaj/gsyDqzM3Lq31uDTXebzQ==">
+      <TableDataSource Name="__EFMigrationsHistory" DataType="System.Int32" Enabled="true" TableName="__EFMigrationsHistory">
+        <Column Name="MigrationId" DataType="System.String"/>
+        <Column Name="ProductVersion" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="dept2" DataType="System.Int32" Enabled="true" TableName="dept2">
+        <Column Name="deptid" DataType="System.String"/>
+        <Column Name="deptname" DataType="System.String"/>
+        <Column Name="location" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="items2" DataType="System.Int32" Enabled="true" TableName="items2">
+        <Column Name="itemcode" DataType="System.String"/>
+        <Column Name="itemname" DataType="System.String"/>
+        <Column Name="deptid" DataType="System.String"/>
+        <Column Name="cost" DataType="System.Decimal"/>
+        <Column Name="rate" DataType="System.Decimal"/>
+        <Column Name="date" DataType="System.DateTime"/>
+        <Column Name="picture" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="mechanic" DataType="System.Int32" Enabled="true" TableName="mechanic">
+        <Column Name="MechanicId" DataType="System.String"/>
+        <Column Name="Name" DataType="System.String"/>
+        <Column Name="Address" DataType="System.String"/>
+        <Column Name="Active" DataType="System.Boolean" BindableControl="CheckBox"/>
+        <Column Name="Image" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="service" DataType="System.Int32" Enabled="true" TableName="service">
+        <Column Name="ServiceId" DataType="System.String"/>
+        <Column Name="slno" DataType="System.String"/>
+        <Column Name="MechanicId" DataType="System.String"/>
+        <Column Name="Description" DataType="System.String"/>
+        <Column Name="Date" DataType="System.DateTime"/>
+      </TableDataSource>
+      <TableDataSource Name="Details" DataType="System.Int32" Enabled="true" TableName="Details">
+        <Column Name="DetailsPK" DataType="System.String"/>
+        <Column Name="FK" DataType="System.String"/>
+        <Column Name="otherFields" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Masters" DataType="System.Int32" Enabled="true" TableName="Masters">
+        <Column Name="MasterPK" DataType="System.String"/>
+        <Column Name="FK" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="__MigrationHistory" DataType="System.Int32" Enabled="true" TableName="__MigrationHistory">
+        <Column Name="MigrationId" DataType="System.String"/>
+        <Column Name="ContextKey" DataType="System.String"/>
+        <Column Name="Model" DataType="System.Byte[]" BindableControl="Picture"/>
+        <Column Name="ProductVersion" DataType="System.String"/>
+      </TableDataSource>
+    </MsSqlDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8"/>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="28.35">
+      <TextObject Name="Text2" Left="28.35" Width="94.5" Height="18.9" Text="MechanicId" Font="Arial, 10pt"/>
+      <TextObject Name="Text4" Left="141.75" Width="94.5" Height="18.9" Text="Name" Font="Arial, 10pt"/>
+      <TextObject Name="Text6" Left="264.6" Width="94.5" Height="18.9" Text="Address" Font="Arial, 10pt"/>
+      <TextObject Name="Text7" Left="387.45" Width="18.9" Height="18.9" Text="Active" Font="Arial, 10pt"/>
+      <TextObject Name="Text9" Left="434.7" Width="94.5" Height="18.9" Text="Image" Font="Arial, 10pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="74.15" Width="718.2" Height="75.6" DataSource="mechanic">
+      <TextObject Name="Text1" Left="28.35" Top="9.45" Width="94.5" Height="18.9" Text="[mechanic.MechanicId]" Font="Arial, 10pt"/>
+      <TextObject Name="Text3" Left="141.75" Top="9.45" Width="94.5" Height="18.9" Text="[mechanic.Name]" Font="Arial, 10pt"/>
+      <TextObject Name="Text5" Left="264.6" Top="9.45" Width="94.5" Height="18.9" Text="[mechanic.Address]" Font="Arial, 10pt"/>
+      <CheckBoxObject Name="CheckBox1" Left="387.45" Top="9.45" Width="18.9" Height="18.9" DataColumn="mechanic.Active"/>
+      <TextObject Name="Text8" Left="434.7" Top="9.45" Width="94.5" Height="47.25" Text="[mechanic.Image]" Font="Arial, 10pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="153.75" Width="718.2" Height="18.9"/>
+  </ReportPage>
+</Report>
